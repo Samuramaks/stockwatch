@@ -64,7 +64,7 @@ func run() error {
 		return fmt.Errorf("monitor: %w", err)
 	}
 
-	sched, err := scheduler.NewSchedule(mon, cfg.PollTimeout)
+	sched, err := scheduler.NewSchedule(mon, cfg.PollInterval)
 	if err != nil {
 		return fmt.Errorf("scheduler: %w", err)
 	}
